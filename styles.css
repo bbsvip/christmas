@@ -1,0 +1,1365 @@
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap");
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100vw;
+    height: auto;
+    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #093740;
+  cursor: none;
+}
+
+body * {
+  font-family: "Mountains of Christmas", cursive;
+}
+
+.counterWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
+  padding: 50px 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.counterWrapper p {
+  background-image: url(pattern-2.jpg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+}
+.counterWrapper .countdown {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.counterWrapper .countdown .countdownProp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 240px;
+  margin: 10px;
+  font-size: 200px;
+  line-height: 150px;
+  background-image: url(pattern-1.png);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 100px #fff;
+}
+.counterWrapper .countdown .countdownProp:not(:first-child):before {
+  content: ":";
+}
+.counterWrapper .countdown .countdownProp:after {
+  content: attr(date-count);
+  width: 100%;
+  font-size: 20px;
+  -webkit-text-fill-color: #fff;
+  line-height: normal;
+}
+
+.santaWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 430px;
+  height: 155px;
+  transform: translateX(-100%);
+  animation: santa__mov 15s linear infinite;
+}
+.santaWrapper .santa {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 125px;
+  height: 107px;
+  z-index: 10;
+  transform: rotateY(180deg);
+}
+.santaWrapper .santa:before, .santaWrapper .santa:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: #520d0d;
+}
+.santaWrapper .santa:before {
+  left: -10px;
+  width: 126px;
+  height: 30px;
+  border-radius: 10px 50% 10px 50%;
+  transform: rotate(0);
+  z-index: 10;
+}
+.santaWrapper .santa:after {
+  left: 70px;
+  width: 50px;
+  height: 53px;
+  border-radius: 50% 10px 22px 10px;
+  transform: rotate(8deg);
+}
+.santaWrapper .santa .hat > * {
+  position: absolute;
+  top: 7px;
+  left: 31px;
+  width: 43px;
+  height: 58px;
+  border-radius: 50%;
+  transform: rotate(28deg);
+  background-color: #d63527;
+}
+.santaWrapper .santa .hat > *:nth-child(1):before, .santaWrapper .santa .hat > *:nth-child(1):after {
+  content: "";
+  position: absolute;
+}
+.santaWrapper .santa .hat > *:nth-child(1):before {
+  top: 9px;
+  left: 45px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.santaWrapper .santa .hat > *:nth-child(1):after {
+  top: 3px;
+  left: 19px;
+  width: 30px;
+  height: 7px;
+  border-radius: 50%;
+  transform: rotate(22deg);
+  background-color: #d63527;
+}
+.santaWrapper .santa .hat > *:nth-child(2) {
+  position: absolute;
+  top: 18px;
+  left: 31px;
+  width: 44px;
+  height: 34px;
+  border-radius: 50%;
+  transform: rotate(12deg);
+  background-color: #fff;
+}
+.santaWrapper .santa .face {
+  position: absolute;
+  top: 25px;
+  left: 37px;
+  width: 31px;
+  height: 17px;
+  border-radius: 20px 20px 50% 50%;
+  transform: rotate(10deg);
+  background-color: #fde2b7;
+  z-index: 10;
+}
+.santaWrapper .santa .face .eyeBrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.santaWrapper .santa .face .eyeBrows.left {
+  top: 2px;
+  left: 22px;
+  transform: rotate(-65deg);
+}
+.santaWrapper .santa .face .eyeBrows.right {
+  top: 1px;
+  left: 4px;
+  transform: rotate(65deg);
+}
+.santaWrapper .santa .face .eye {
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  width: 3px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.santaWrapper .santa .face .eye.left {
+  top: 8px;
+  left: 2px;
+}
+.santaWrapper .santa .face .eye.right {
+  top: 8px;
+  left: 20px;
+}
+.santaWrapper .santa .face .nose {
+  position: absolute;
+  top: 10px;
+  left: 6px;
+  width: 12px;
+  height: 9px;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: #f7d194;
+}
+.santaWrapper .santa .face .cheek {
+  position: absolute;
+  top: 10px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: #f4cfe3;
+}
+.santaWrapper .santa .face .cheek.left {
+  top: 12px;
+  left: -3px;
+}
+.santaWrapper .santa .face .cheek.right {
+  top: 13px;
+  left: 22px;
+}
+.santaWrapper .santa .face .beard > * {
+  position: absolute;
+  top: 8px;
+  left: -14px;
+  width: 15px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.santaWrapper .santa .face .beard > *:before, .santaWrapper .santa .face .beard > *:after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+}
+.santaWrapper .santa .face .beard > *:before {
+  top: 12px;
+  left: 1px;
+  width: 15px;
+  height: 17px;
+  border-radius: 50%;
+}
+.santaWrapper .santa .face .beard > *:nth-child(2) {
+  top: 16px;
+  left: -8px;
+  width: 26px;
+  height: 30px;
+}
+.santaWrapper .santa .face .beard > *:nth-child(2):before {
+  top: 16px;
+  left: 13px;
+  width: 19px;
+  height: 17px;
+}
+.santaWrapper .santa .face .beard > *:nth-child(2):after {
+  top: 1px;
+  left: 13px;
+  width: 19px;
+  height: 17px;
+}
+.santaWrapper .santa .face .beard > *:nth-child(3) {
+  top: 16px;
+  left: 14px;
+  width: 27px;
+  height: 28px;
+}
+.santaWrapper .santa .face .beard > *:nth-child(3):before {
+  top: -4px;
+  left: 13px;
+  width: 17px;
+  height: 17px;
+}
+.santaWrapper .santa .body {
+  position: absolute;
+  top: 54px;
+  left: 16px;
+  width: 88px;
+  height: 53px;
+}
+.santaWrapper .santa .body:before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  right: -10px;
+  width: 53px;
+  height: 51px;
+  border-radius: 42% 50%;
+  background-color: #f3f0f0;
+  z-index: -1;
+}
+.santaWrapper .santa .body .sweater {
+  top: -3px;
+  left: 10px;
+  position: absolute;
+  width: 45px;
+  height: 39px;
+  border-radius: 50% 50% 10% 10%;
+  background-color: #d63527;
+  z-index: 5;
+}
+.santaWrapper .santa .body .sweater:before {
+  content: "";
+  top: 28px;
+  left: 0px;
+  position: absolute;
+  width: 45px;
+  height: 5px;
+  background-color: #000;
+  transform: rotate(1deg);
+}
+.santaWrapper .santa .body .sweater:after {
+  content: "";
+  top: 27px;
+  left: 10px;
+  position: absolute;
+  width: 7px;
+  height: 5px;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  transform: rotate(1deg);
+}
+.santaWrapper .santa .body .hand {
+  position: absolute;
+}
+.santaWrapper .santa .body .hand.left {
+  top: 5px;
+  left: 19px;
+  width: 33px;
+  height: 30px;
+  overflow: hidden;
+}
+.santaWrapper .santa .body .hand.left .inner {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 49px;
+  z-index: 100;
+  height: 7px;
+  border-radius: 10px;
+  transform: rotate(12deg);
+  background-color: #d63527;
+  animation: santa__hand-right 0.3s linear alternate infinite;
+}
+.santaWrapper .santa .body .hand.left .inner:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 7px;
+  top: -2px;
+  left: -6px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: rotate(25deg);
+}
+.santaWrapper .santa .body .hand.right {
+  top: 4px;
+  left: 3px;
+  width: 11px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: #d63527;
+  transform: rotate(25deg);
+  animation: santa__hand-left 0.3s linear alternate infinite;
+}
+.santaWrapper .santa .body .hand.right:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 7px;
+  top: -2px;
+  left: -6px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+.santaWrapper .rope {
+  position: absolute;
+  top: 92px;
+  left: 84px;
+  width: 182px;
+  height: 33px;
+  overflow: hidden;
+  z-index: 10;
+  transform: rotate(0deg);
+  transform-origin: bottom right;
+  animation: rope__right 0.3s linear alternate infinite;
+}
+.santaWrapper .rope.back {
+  top: 85px;
+  left: 105px;
+  width: 149px;
+  transform: rotate(4deg);
+  z-index: 0;
+  transform-origin: top left;
+  animation: rope__left 0.3s linear alternate infinite;
+}
+.santaWrapper .rope:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+  width: 100%;
+  height: 48px;
+  border-bottom: 1px solid #fff;
+  border-radius: 50%;
+}
+.santaWrapper .sled {
+  position: absolute;
+  bottom: -12px;
+  left: 0px;
+  width: 145px;
+  height: 11px;
+  transform: rotate(-3deg);
+  border-bottom: 5px solid #690e00;
+  border-right: 5px solid #690e00;
+  border-radius: 10px;
+  z-index: 10;
+}
+.santaWrapper .sled:before, .santaWrapper .sled:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #690e00;
+}
+.santaWrapper .sled:before {
+  top: 2px;
+  left: 34px;
+  height: 9px;
+}
+.santaWrapper .sled:after {
+  top: 3px;
+  left: 108px;
+  width: 5px;
+  height: 8px;
+}
+.santaWrapper .reindeer {
+  position: absolute;
+  width: 115px;
+  height: 155px;
+  top: 50px;
+  right: 0;
+  transform: rotate(14deg) translateX(calc(-100% - 30px));
+  z-index: 0;
+}
+.santaWrapper .reindeer.second {
+  top: 0;
+  transform: rotate(14deg);
+}
+.santaWrapper .reindeer.second .rope {
+  top: 70px;
+  left: -55px;
+  width: 155px;
+  transform: rotate(-15deg);
+  animation: rope__inner 0.3s linear alternate infinite;
+}
+.santaWrapper .reindeer:before {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 76px;
+  width: 8px;
+  height: 31px;
+  background-color: #520d0d;
+  z-index: 10;
+  transform: rotate(-55deg);
+}
+.santaWrapper .reindeer:after {
+  content: "";
+  position: absolute;
+}
+.santaWrapper .reindeer .face {
+  position: absolute;
+  width: 30px;
+  height: 22px;
+  top: 44px;
+  left: 72px;
+  border-radius: 10px 10px 50% 50%;
+  transform: rotate(-3deg);
+  background-color: #cca58b;
+}
+.santaWrapper .reindeer .face:before {
+  content: "";
+  position: absolute;
+  background-color: #cca58b;
+  width: 29px;
+  height: 16px;
+  border-radius: 50%;
+  top: 0px;
+  left: 11px;
+  transform: rotate(-49deg);
+}
+.santaWrapper .reindeer .face:after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: -8px;
+  left: 31px;
+}
+.santaWrapper .reindeer .face .ear {
+  position: absolute;
+  width: 21px;
+  height: 11px;
+  top: 4px;
+  left: -18px;
+  border-radius: 4px 0 50% 50%;
+  transform: rotate(4deg);
+  background-color: #cca58b;
+}
+.santaWrapper .reindeer .face .ear:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 34px;
+  width: 4px;
+  height: 5px;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+  background-color: #000;
+}
+.santaWrapper .reindeer .face .horn {
+  position: absolute;
+  width: 29px;
+  height: 4px;
+  top: -7px;
+  left: -21px;
+  border-radius: 2px;
+  transform: rotate(38deg);
+  background-color: #f0dbc2;
+}
+.santaWrapper .reindeer .face .horn:before, .santaWrapper .reindeer .face .horn:after {
+  content: "";
+  position: absolute;
+  background-color: #f0dbc2;
+  border-radius: 2px;
+}
+.santaWrapper .reindeer .face .horn.left {
+  top: -7px;
+  left: -21px;
+}
+.santaWrapper .reindeer .face .horn.left:before {
+  top: -4px;
+  left: 6px;
+  width: 14px;
+  height: 4px;
+  transform: rotate(43deg);
+}
+.santaWrapper .reindeer .face .horn.left:after {
+  top: -4px;
+  left: 13px;
+  width: 14px;
+  height: 4px;
+  -webkit-transform: rotate(43deg);
+  transform: rotate(53deg);
+}
+.santaWrapper .reindeer .face .horn.right {
+  top: -12px;
+  left: -6px;
+  width: 24px;
+  transform: rotate(62deg);
+}
+.santaWrapper .reindeer .face .horn.right:before {
+  top: -3px;
+  left: 5px;
+  width: 10px;
+  height: 4px;
+  transform: rotate(43deg);
+}
+.santaWrapper .reindeer .face .horn.right:after {
+  top: -3px;
+  left: 11px;
+  width: 10px;
+  height: 4px;
+  transform: rotate(53deg);
+}
+.santaWrapper .reindeer .body {
+  position: absolute;
+  width: 58px;
+  height: 31px;
+  top: 84px;
+  left: 28px;
+  border-radius: 50% 0;
+  transform: rotate(-3deg);
+  background-color: #cca58b;
+}
+.santaWrapper .reindeer .body:before {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 26px;
+  top: -15px;
+  left: 32px;
+  border-radius: 0 0 50% 50%;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-55deg);
+  background-color: #cca58b;
+}
+.santaWrapper .reindeer .body:after {
+  content: "";
+  position: absolute;
+  width: 43px;
+  height: 26px;
+  top: -11px;
+  left: 29px;
+  border-radius: 0 0 50% 50%;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-30deg);
+  background-color: #cca58b;
+}
+.santaWrapper .reindeer .body .foot.front .inner {
+  position: absolute;
+  width: 40px;
+  height: 8px;
+  top: 13px;
+  left: 35px;
+  border-radius: 0 50%;
+  transform: rotate(-17deg);
+  background-color: #cca58b;
+  animation: reindeer__leg-front 0.3s linear alternate infinite;
+}
+.santaWrapper .reindeer .body .foot.front .inner .extension {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  top: 3px;
+  left: 100%;
+  border-radius: 2px 50%;
+  transform: rotate(131deg);
+  background-color: #cca58b;
+  transform-origin: top left;
+  animation: reindeer__leg-front-extension 0.2s linear alternate infinite;
+}
+.santaWrapper .reindeer .body .foot.front .inner .extension:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 7px;
+  height: 8px;
+  border-radius: 2px;
+  background-color: #000;
+}
+.santaWrapper .reindeer .body .foot.back .inner {
+  position: absolute;
+  width: 56px;
+  height: 9px;
+  top: 37px;
+  left: -29px;
+  border-radius: 0 50%;
+  transform: rotate(-73deg);
+  animation: reindeer__leg-back 0.3s linear alternate infinite;
+}
+.santaWrapper .reindeer .body .foot.back .inner:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 16px;
+  top: 4px;
+  left: 25px;
+  border-radius: 0 50%;
+  transform: rotate(15deg);
+  background-color: #cca58b;
+}
+.santaWrapper .reindeer .body .foot.back .inner:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  background-color: #cca58b;
+}
+.santaWrapper .reindeer .body .foot.back .inner .extension {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 8px;
+  background: #cca58b;
+  border-radius: 2px 50%;
+  transform-origin: top right;
+  animation: reindeer__leg-back-extension 0.2s linear alternate infinite;
+}
+.santaWrapper .reindeer .body .foot.back .inner .extension:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 9px;
+  top: -2px;
+  left: -2px;
+  border-radius: 2px 0 2px 2px;
+  transform: rotate(14deg);
+  background-color: #000;
+}
+.santaWrapper .reindeer .body .tail {
+  position: absolute;
+  width: 27px;
+  height: 26px;
+  top: 6px;
+  left: -8px;
+  border-radius: 50% 2px;
+  transform: rotate(-17deg);
+  background-color: #cca58b;
+}
+.santaWrapper .reindeer .body .tail:before {
+  content: "";
+  position: absolute;
+  background-color: #cca58b;
+  border-radius: 50%;
+  top: -2px;
+  left: -3px;
+  width: 15px;
+  height: 5px;
+  transform: rotate(25deg);
+}
+
+
+
+/* Tree */
+.tree {
+  --tree-width: 512px;
+  --tree-height: calc(var(--tree-width) * 1.1699);
+  --tree-scale: 0.2;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  z-index: 2;
+  flex: 0 0 auto;
+  width: var(--tree-width);
+  height: var(--tree-height);
+  transform: scale(var(--tree-scale));
+}
+@media (max-width: 987px) {
+  .tree {
+    --tree-scale: 0.15;
+  }
+}
+@media (max-width: 480px) {
+  .tree {
+    --tree-scale: 0.05;
+  }
+}
+.tree__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% calc( ( ((100vh - var(--tree-height) * var(--tree-scale)) / 2) / var(--tree-scale) ) * -1 );
+  animation: tree-body 5s linear infinite;
+}
+.tree__triangle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: auto;
+  transform: translate3d(-50%, 0, 0);
+}
+.tree__triangle img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.tree__triangle--1 {
+  z-index: 7;
+  width: 41.41%;
+}
+.tree__triangle--2 {
+  top: 8.35%;
+  z-index: 5;
+  width: 60.94%;
+}
+.tree__triangle--3 {
+  top: 16.69%;
+  z-index: 3;
+  width: 80.47%;
+}
+.tree__triangle--4 {
+  top: 25.04%;
+  z-index: 1;
+  width: 100%;
+}
+.tree__ring {
+  --width: calc(var(--tree-width) * 0.7832);
+  position: absolute;
+  top: 0;
+  left: calc(50% - (var(--width) / 2));
+  width: var(--width);
+  animation: ring-swing 5s linear infinite;
+}
+.tree__ring__outer {
+  position: absolute;
+  inset: 0;
+}
+.tree__ring__inner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.tree__ring__inner:before {
+  position: absolute;
+  top: calc(50% - var(--width) / 2);
+  left: calc(50% - var(--width) / 2);
+  display: block;
+  width: var(--width);
+  height: var(--width);
+  background: linear-gradient(0deg, #4cede1, #ffc53a, #ff858d);
+  animation: ring-gradient 2s linear infinite;
+  content: "";
+}
+.tree__ring svg {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+.tree__ring path {
+  stroke: #000;
+  stroke-width: 2px;
+}
+.tree__ring--1 {
+  top: 20%;
+  z-index: 6;
+  aspect-ratio: 401/118;
+}
+.tree__ring--1 .tree__ring__outer {
+  animation: ring-float-1 15s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+}
+.tree__ring--1 .tree__ring__inner {
+  clip-path: path("M381.517 75.58c9.479-6.786 14.087-13.738 13.949-20.538-.138-6.8-5.024-13.56-14.771-19.955-9.728-6.382-23.944-12.15-41.787-16.934C303.246 8.592 253.871 3.17 199.281 4.278c-54.59 1.107-103.704 8.528-138.948 19.527C42.698 29.31 28.727 35.65 19.267 42.421c-9.48 6.785-14.088 13.738-13.95 20.537.138 6.8 5.024 13.56 14.771 19.955 9.728 6.383 23.945 12.151 41.787 16.934 35.663 9.561 85.037 14.983 139.627 13.876 54.59-1.108 103.704-8.528 138.949-19.528 17.634-5.503 31.605-11.844 41.066-18.616Zm-39.262 22.328c-35.918 11.21-85.644 18.688-140.672 19.804-55.029 1.117-105.016-4.338-141.36-14.082-18.166-4.87-32.98-10.826-43.317-17.608C6.602 79.26.53 71.528.358 63.059.186 54.59 5.94 46.617 15.961 39.444c10.054-7.196 24.614-13.749 42.567-19.352C94.447 8.882 144.172 1.405 199.2.288 254.229-.829 304.216 4.626 340.56 14.37c18.166 4.87 32.98 10.826 43.317 17.609 10.304 6.76 16.376 14.493 16.548 22.962.172 8.47-5.581 16.442-15.603 23.615-10.053 7.197-24.614 13.749-42.567 19.352Z");
+}
+.tree__ring--2 {
+  --width: calc(var(--tree-width) * 0.9785);
+  top: 40%;
+  z-index: 4;
+  aspect-ratio: 501/148;
+}
+.tree__ring--2 .tree__ring__outer {
+  animation: ring-float-2 20s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+}
+.tree__ring--2 .tree__ring__inner {
+  clip-path: path("M476.719 94.4382C488.566 85.9567 494.324 77.2659 494.152 68.7664C493.98 60.2669 487.873 51.8168 475.692 43.823C463.535 35.8447 445.767 28.6344 423.468 22.6549C378.898 10.7039 317.192 3.92644 248.967 5.31103C180.742 6.69561 119.361 15.971 75.3131 29.7205C53.2746 36.5997 35.8138 44.525 23.9901 52.99C12.1433 61.4715 6.38459 70.1623 6.55701 78.6618C6.72944 87.1613 12.8358 95.6114 25.0169 103.605C37.1742 111.584 54.942 118.794 77.2414 124.773C121.811 136.724 183.517 143.502 251.742 142.117C319.967 140.733 381.348 131.457 425.396 117.708C447.434 110.828 464.895 102.903 476.719 94.4382ZM427.652 122.349C382.761 136.361 320.616 145.709 251.843 147.104C183.071 148.5 120.598 141.682 75.1759 129.502C52.4734 123.415 33.9593 115.969 21.0404 107.491C8.16216 99.0396 0.573929 89.3737 0.35917 78.7876C0.144411 68.2015 7.33439 58.2357 19.8593 49.2688C32.4236 40.2736 50.6206 32.0831 73.0575 25.0795C117.948 11.0671 180.093 1.71964 248.866 0.323939C317.638 -1.07176 380.111 5.74662 425.533 17.9262C448.236 24.0137 466.75 31.4592 479.669 39.9372C492.547 48.3886 500.135 58.0545 500.35 68.6406C500.565 79.2267 493.375 89.1925 480.85 98.1594C468.285 107.155 450.088 115.345 427.652 122.349Z");
+}
+.tree__ring--2 .tree__ring__inner:before {
+  animation-delay: 0.3s;
+  animation-duration: 3s;
+}
+.tree__ring--3 {
+  --width: calc(var(--tree-width) * 1.1738);
+  top: 65%;
+  z-index: 2;
+  aspect-ratio: 601/177;
+}
+.tree__ring--3 .tree__ring__outer {
+  animation: ring-float-3 22s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+}
+.tree__ring--3 .tree__ring__inner {
+  clip-path: path("M571.992 113.297C586.208 103.119 593.118 92.6902 592.912 82.4908C592.705 72.2914 585.377 62.1514 570.76 52.5587C556.171 42.9848 534.849 34.3324 508.09 27.157C454.607 12.8158 380.56 4.68287 298.689 6.34437C216.819 8.00588 143.162 19.1363 90.3048 35.6357C63.8586 43.8908 42.9057 53.4012 28.7172 63.5591C14.501 73.7369 7.59061 84.166 7.79752 94.3653C8.00443 104.565 15.3321 114.705 29.9494 124.297C44.5382 133.871 65.8596 142.524 92.6188 149.699C146.102 164.04 220.149 172.173 302.02 170.512C383.89 168.85 457.547 157.72 510.404 141.22C536.85 132.965 557.803 123.455 571.992 113.297ZM513.111 146.79C459.243 163.605 384.668 174.821 302.141 176.496C219.614 178.171 144.646 169.989 90.1401 155.374C62.8972 148.069 40.6802 139.134 25.1776 128.96C9.72369 118.819 0.617816 107.22 0.360106 94.5163C0.102395 81.8129 8.73037 69.854 23.7602 59.0937C38.8375 48.2994 60.6738 38.4708 87.5981 30.0665C141.466 13.2516 216.041 2.03471 298.568 0.35987C381.095 -1.31497 456.063 6.86709 510.569 21.4826C537.812 28.7876 560.029 37.7222 575.531 47.8958C590.985 58.0375 600.091 69.6365 600.349 82.3399C600.607 95.0432 591.979 107.002 576.949 117.762C561.872 128.557 540.035 138.385 513.111 146.79Z");
+}
+.tree__ring--3 .tree__ring__inner:before {
+  animation-delay: 0.9s;
+  animation-duration: 4s;
+}
+.tree__glow {
+  position: absolute;
+  top: calc(50% - var(--tree-height) / 2);
+  left: calc(50% - var(--tree-width) / 2);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: color-dodge;
+  transform-origin: 50% calc( ( ((100vh - var(--tree-height) * var(--tree-scale)) / 2) / var(--tree-scale) ) * -1 );
+  animation: tree-body 5s linear infinite;
+}
+.tree__glow__inner {
+  position: absolute;
+  inset: 0;
+  clip-path: path("M265.71 5.60704C261.395 -1.86909 250.605 -1.86901 246.29 5.60703L151.51 169.815C147.196 177.288 152.586 186.634 161.219 186.634H169.157L101.863 303.223C96.5462 312.433 103.19 323.951 113.829 323.951H117.253L52.2155 436.63C46.0764 447.266 53.3549 460.49 65.3688 461.235L2.5685 570.037C-4.75377 582.723 4.39749 598.585 19.0484 598.585H492.952C507.603 598.585 516.754 582.723 509.431 570.037L446.631 461.235C458.645 460.49 465.924 447.266 459.785 436.63L394.747 323.951H398.171C408.81 323.951 415.454 312.433 410.137 303.223L342.843 186.634H350.781C359.414 186.634 364.804 177.288 360.491 169.815L265.71 5.60704Z");
+}
+.tree__glow__inner:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  display: block;
+  background: linear-gradient(0deg, #4cede1, #ffc53a, #ff858d, #ffc53a, #4cede1) 50% 0/100% 50%;
+  animation: glow-gradient 5s linear infinite;
+  content: "";
+}
+.tree__glow__layer {
+  position: absolute;
+  inset: 0;
+}
+.tree__glow__layer--1 {
+  filter: blur(50px);
+  opacity: 0.5;
+}
+.tree__glow__layer--2 {
+  filter: blur(20px);
+  opacity: 0.5;
+}
+.tree__glow__layer--3 {
+  filter: blur(2px);
+}
+.tree__string {
+  position: absolute;
+  bottom: 100%;
+  left: calc(50% - 1px);
+  width: 5px;
+  height: calc( ((100vh - var(--tree-height) * var(--tree-scale)) / 2) / var(--tree-scale) );
+  clip-path: polygon(-20px 0, calc(100% + 20px) 0, calc(100% + 20px) calc(100% + 10px), -20px calc(100% + 10px));
+  mix-blend-mode: color-dodge;
+  transform-origin: 50% 0;
+  animation: string 5s linear infinite;
+}
+.tree__string:before, .tree__string:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 300%;
+  background: linear-gradient(20deg, #4cede1, #ffc53a, #ff858d, #ffc53a, #4cede1) 50% 0/100% 50%;
+  animation: string-gradient 3s linear infinite;
+  content: "";
+}
+.tree__string:before {
+  left: -1px;
+  width: 3px;
+  filter: blur(6px);
+}
+.tree__string:after {
+  opacity: 1;
+}
+
+/* Cursor */
+.cursor svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  filter: url("#goo");
+  mix-blend-mode: color-dodge;
+}
+.cursor__pointer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border: 1px solid #083640;
+  border-radius: 50%;
+  opacity: 0.99;
+  transform: translate3d(calc(var(--mouse-x) * 1px - 50%), calc(var(--mouse-y) * 1px - 50%), 0);
+  will-change: transform;
+}
+.cursor__pointer:before {
+  position: absolute;
+  width: 400%;
+  height: 100%;
+  background: linear-gradient(45deg, #4cede1, #ffc53a, #ff858d, #ffc53a, #4cede1) 0 0/66.66% 100%;
+  animation: pointer-gradient 1s linear infinite;
+  will-change: transform;
+  content: "";
+}
+/* Background */
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.3;
+}
+.background__word {
+  --height: min(15vh, 153px);
+  --width: calc(var(--height) * 18.3173);
+  --direction: 1;
+  position: relative;
+  aspect-ratio: 2802/153;
+  display: block;
+  width: auto;
+  height: var(--height);
+}
+.background__word:nth-child(2n+1) {
+  --direction: -1;
+}
+.background__word:before {
+  position: absolute;
+  top: 0;
+  left: calc(var(--position) * var(--width) * -1 - var(--width));
+  display: block;
+  width: calc(var(--width) * 4);
+  height: 100%;
+  background: url("merry-christmas-up.png") 0 50%/contain;
+  animation: background calc(60s + var(--duration) * 60s) linear infinite;
+  content: "";
+}
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes diagonal-fall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+        transform: translate(10vw, 100vh);
+    }
+}
+
+@keyframes string {
+  0% {
+    transform: rotateZ(0deg);
+    animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+  }
+  25% {
+    transform: rotateZ(2deg);
+    animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  }
+  75% {
+    transform: rotateZ(-2deg);
+    animation-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+  }
+  100% {
+    transform: rotateZ(0deg);
+    animation-timing-function: linear;
+  }
+}
+@keyframes string-gradient {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes tree-body {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+  }
+  25% {
+    transform: translate3d(0, 0, 0) rotate(2deg);
+    animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  }
+  75% {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+    animation-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    animation-timing-function: linear;
+  }
+}
+@keyframes ring-gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ring-swing {
+  0% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  }
+  25% {
+    transform: translate3d(2%, 0, 0);
+    animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  }
+  75% {
+    transform: translate3d(-2%, 0, 0);
+    animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: linear;
+  }
+}
+@keyframes ring-float-1 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-7deg);
+  }
+  25% {
+    transform: translate3d(0, -15%, 0) rotate(-5deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate3d(0, -15%, 0) rotate(-3.5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-7deg);
+  }
+}
+@keyframes ring-float-2 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(7deg);
+  }
+  25% {
+    transform: translate3d(1%, 10%, 0) rotate(2deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(2deg);
+  }
+  75% {
+    transform: translate3d(-1%, 10%, 0) rotate(3.5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(7deg);
+  }
+}
+@keyframes ring-float-3 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-7deg);
+  }
+  25% {
+    transform: translate3d(-2%, -12.5%, 0) rotate(-2deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+  }
+  75% {
+    transform: translate3d(2%, -12.5%, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-7deg);
+  }
+}
+@keyframes noise-background {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(50px, 30px, 0);
+  }
+  40% {
+    transform: translate3d(10px, 50px, 0);
+  }
+  60% {
+    transform: translate3d(30px, 20px, 0);
+  }
+  80% {
+    transform: translate3d(50px, 0, 0);
+  }
+  100% {
+    transform: translate3d(100px, 0, 0);
+  }
+}
+@keyframes glow-gradient {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+@keyframes background {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(var(--width) * var(--direction)), 0, 0);
+  }
+}
+@keyframes pointer-gradient {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-66.66%, 0, 0);
+  }
+}
+@keyframes santa__mov {
+  0%, 100% {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%) rotate(-10deg);
+  }
+  30% {
+    bottom: 100%;
+    left: 100%;
+    transform: translateX(100%) rotate(-10deg);
+  }
+  40% {
+    bottom: 0;
+    left: 100%;
+    transform: translateX(100%) rotateY(180deg);
+  }
+  70% {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%) rotateY(180deg);
+  }
+}
+@keyframes santa__hand-left {
+  0% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes santa__hand-right {
+  0% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+@keyframes rope__left {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes rope__right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+@keyframes rope__inner {
+  0% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(-15deg) translateY(3px);
+  }
+}
+@keyframes reindeer__leg-front {
+  0% {
+    transform: rotate(-24deg);
+  }
+  100% {
+    transform: rotate(-13deg);
+  }
+}
+@keyframes reindeer__leg-front-extension {
+  0% {
+    transform: rotate(131deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes reindeer__leg-back {
+  0% {
+    transform: rotate(-73deg);
+  }
+  100% {
+    transform: rotate(-95deg);
+  }
+}
+@keyframes reindeer__leg-back-extension {
+  0% {
+    top: 4px;
+    left: -4px;
+    transform: rotate(50deg);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .counterWrapper .countdown {
+    margin: 20px 0;
+  }
+  .counterWrapper .countdown .countdownProp {
+    width: 120px;
+    font-size: 100px;
+    line-height: 80px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tree {
+    top: 0
+  }
+  .santaWrapper {
+    display: none;
+  }
+  .counterWrapper p {
+    font-size: 50px;
+  }
+  .counterWrapper .countdown .countdownProp {
+    display: block;
+  }
+  .counterWrapper .countdown .countdownProp:not(:first-child):before {
+    display: none;
+  }
+  .counterWrapper .countdown .countdownProp:after {
+    display: block;
+  }
+}
