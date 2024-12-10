@@ -171,13 +171,11 @@
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 <script>
-    function PlayMusic() {
-      var play=document.getElementById("playAudio");
-      play.play();
+    document.addEventListener('click', musicPlay);
+    function musicPlay() {
+        document.getElementById('playAudio').play();
+        document.removeEventListener('click', musicPlay);
     }
-        $(document).ready(function(){
-      setTimeout(PlayMusic,200);
-    })
 </script>
 <script>
     $(function () {
